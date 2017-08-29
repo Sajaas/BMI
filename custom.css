@@ -1,0 +1,35 @@
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 25px
+}
+
+body {
+    background-color: black;
+    color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+form {
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+#calculate {
+  color: black;
+}
+
+#calculate_2 {
+  color: black;
+}
+
+span {
+  padding-bottom: 20px;
+}
