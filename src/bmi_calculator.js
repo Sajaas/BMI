@@ -9,6 +9,9 @@ Bmi_calculator.prototype.metric_bmi = function(obj) {
     obj.bmi_value = parseFloat(final_bmi.toFixed(2));
     set_bmi_message(obj);
   }
+  else {
+    error_message(obj);
+  }
 };
 
 Bmi_calculator.prototype.imperial_bmi = function(obj) {
@@ -19,6 +22,9 @@ Bmi_calculator.prototype.imperial_bmi = function(obj) {
     var final_bmi = (weight_pounds * 703) / (((height_feets * 12) + height_inches) * ((height_feets * 12) + height_inches));
     obj.bmi_value = parseFloat(final_bmi.toFixed(2));
     set_bmi_message(obj);
+  }
+  else {
+    error_message(obj);
   }
 };
 
@@ -35,4 +41,8 @@ function set_bmi_message(obj) {
   if (obj.bmi_value > 30) {
     obj.bmi_message = "Obese";
   }
+};
+
+function error_message(obj) {
+  obj.error_mess = "Do you want to be undefined, or what? Enter your real values please!";
 };

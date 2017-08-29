@@ -33,10 +33,11 @@
          <div class="collapsible-body"><p>
           <div class="white-text">
            <form>
-           <input type="text" id="weight" placeholder="Weight">
-           <input type="text" id="height" placeholder="Height">
+           <input type="text" id="weight" placeholder="Weight in kilograms">
+           <input type="text" id="height" placeholder="Height in centimeters">
            <input class="btn waves-effect white" type="button" id="calculate" value="Calculate">
            </form>
+           <span id="display_error"></span>
            <span id="display_value"></span>
            <span id="display_message"></span></p></div>
          </div>
@@ -58,6 +59,7 @@
            <input type="button" id="calculate_2" value="Calculate">
            </form>
            <div>
+           <span id="display_error_2"></span>
            <span id="display_value_2"></span>
            <span id="display_message_2"></span></div></p></div>
          </div>
@@ -67,21 +69,37 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $('#calculate').click(function () {
+          $('#display_value').html('');
+          $('#display_message').html('');
+          $('#display_error').html('');
           var w = parseFloat($('#weight').val());
           var h = parseFloat($('#height').val());
           var person = new Person({weight: w, height: h});
           person.calculate_bmi();
-          $('#display_value').html('Your BMI is ' + person.bmi_value);
-          $('#display_message').html('and you are '+ person.bmi_message);
+          if (person.error_mess === undefined) {
+            $('#display_value').html('Your BMI is ' + person.bmi_value);
+            $('#display_message').html('and you are '+ person.bmi_message + '.');
+          }
+          else {
+          $('#display_error').html(person.error_mess);
+        }
         });
         $('#calculate_2').click(function () {
+          $('#display_value_2').html('');
+          $('#display_message_2').html('');
+          $('#display_error_2').html('');
           var wp = parseFloat($('#weight_pounds').val());
           var hf = parseFloat($('#height_feets').val());
           var hi = parseFloat($('#height_inches').val());
           var person_imperial = new Person({weight_pounds: wp, height_feets: hf, height_inches: hi});
           person_imperial.calculate_bmi_imperial();
+          if (person_imperial.error_mess === undefined) {
           $('#display_value_2').html('Your BMI is ' + person_imperial.bmi_value);
-          $('#display_message_2').html('and you are '+ person_imperial.bmi_message);
+          $('#display_message_2').html('and you are '+ person_imperial.bmi_message + '.');
+        }
+        else {
+          $('#display_error_2').html(person_imperial.error_mess);
+        }
         });
       });
     </script>
