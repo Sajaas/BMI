@@ -5,7 +5,11 @@ describe('BMI_UI - index.html', function() {
         $.holdReady(false);
         $('#weight').val('90');
         $('#height').val('186');
+        $('#weight_pounds')
+        $('#height_feets')
+        $('#height_inches')
         $('#calculate').trigger('click');
+        $('#calculate_2').trigger('click');
     });
 
     it("displays BMI Value", function() {

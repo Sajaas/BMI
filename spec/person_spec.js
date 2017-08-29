@@ -37,12 +37,12 @@ describe("Person", function() {
   });
 
   it("should calculate BMI value (imperial)", function() {
-    person_imperial.calculate_bmi();
-    expect(person_imperial.bmi_value).toEqual(26.00);
+    person_imperial.calculate_bmi_imperial();
+    expect(person_imperial.bmi_value).toEqual(26.01);
   });
 
   it("should have a BMI message (imperial)", function() {
-    person_imperial.calculate_bmi();
+    person_imperial.calculate_bmi_imperial();
     expect(person_imperial.bmi_message).toEqual("Overweight");
   });
 });

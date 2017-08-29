@@ -15,7 +15,7 @@ describe("Bmi_calculator", function () {
   });
 
   it("calculates BMI for a person using imperial method", function() {
-    calculator_2.imperial_bmi(person);
-    expect(person.bmi_value).toEqual(26.00);
+    calculator_2.imperial_bmi(person_imperial);
+    expect(person_imperial.bmi_value).toEqual(26.01);
   });
 });
