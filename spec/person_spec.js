@@ -21,7 +21,7 @@ describe("Person", function() {
 
   it("should have a BMI Message (metric)", function() {
     person.calculate_bmi();
-    expect(person.bmi_message).toEqual("Overweight");
+    expect(person.bmi_message).toEqual("overweight");
   });
 
   it("should have a weight in pounds of 198.42", function() {
@@ -43,6 +43,6 @@ describe("Person", function() {
 
   it("should have a BMI message (imperial)", function() {
     person_imperial.calculate_bmi_imperial();
-    expect(person_imperial.bmi_message).toEqual("Overweight");
+    expect(person_imperial.bmi_message).toEqual("overweight");
   });
 });
