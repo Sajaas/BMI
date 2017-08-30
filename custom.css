@@ -27,11 +27,3 @@ span {
 .material-icons {
   padding-left: 10px;
 }
-
-$(document).ready (function() {
-  $("#height").keyup(function(event){
-    if(event.keyCode == 13){
-      $("#calculate").click();
-    }
-  }
-});

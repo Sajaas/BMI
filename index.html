@@ -56,7 +56,7 @@
            <input type="text" id="weight_pounds" placeholder="Weight in pounds">
            <input type="text" id="height_feets" placeholder="Height in feet">
            <input type="text" id="height_inches" placeholder="Height in inches">
-           <input type="button" id="calculate_2" value="Calculate">
+           <input class="btn waves-effect white" type="button" id="calculate_2" value="Calculate">
            </form>
            <div>
            <span id="display_error_2"></span>
@@ -100,7 +100,18 @@
         else {
           $('#display_error_2').html(person_imperial.error_mess);
         }
-        });
+      });
+
+          $("#height").keyup(function(event){
+            if(event.keyCode == 13){
+              $("#calculate").click();
+            };
+          });
+          $("#height_inches").keyup(function(event){
+            if(event.keyCode == 13){
+              $("#calculate_2").click();
+            };
+          });
       });
     </script>
   </div>
