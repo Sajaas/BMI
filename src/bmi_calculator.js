@@ -30,16 +30,16 @@ Bmi_calculator.prototype.imperial_bmi = function(obj) {
 
 function set_bmi_message(obj) {
   if (obj.bmi_value < 18.5) {
-    obj.bmi_message = "Underweight";
+    obj.bmi_message = "underweight";
   }
   if (obj.bmi_value > 18.5 && obj.bmi_value < 25) {
-    obj.bmi_message = "Normal";
+    obj.bmi_message = "normal (and I mean normal weight, not normal person. How would I know that?)";
   }
   if (obj.bmi_value > 25 && obj.bmi_value < 30) {
-    obj.bmi_message = "Overweight";
+    obj.bmi_message = "overweight";
   }
   if (obj.bmi_value > 30) {
-    obj.bmi_message = "Obese";
+    obj.bmi_message = "obese";
   }
 };
 
