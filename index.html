@@ -7,12 +7,10 @@
     <title>BMI Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"> -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
     <link rel="stylesheet" href="custom.css">
     <meta charset="utf-8">
     <script src="src/person.js"></script>
@@ -21,37 +19,37 @@
   </head>
   <body>
     <div class="container">
-    <h1 class="white-text center-align">BMI CALCULATOR</h1>
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-         <div class="collapsible-header">
-           <div class="center-align full-width">
-             <div class="center-align">
-            <h4><i class="material-icons">arrow_forward</i>Metric method<i class="large material-icons">arrow_backward</i></h4></div>
+      <h1 class="white-text center-align">BMI CALCULATOR</h1>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+           <div class="collapsible-header">
+             <div class="center-align full-width">
+               <div class="center-align">
+                <h4><i class="material-icons">arrow_forward</i>Metric method<i class="large material-icons">arrow_backward</i></h4></div>
+              </div>
+            </div>
+             <div class="collapsible-body"><p>
+              <div class="white-text">
+               <form>
+                 <input type="text" id="weight" placeholder="Weight in kilograms">
+                 <input type="text" id="height" placeholder="Height in centimeters">
+                 <input class="btn waves-effect white" type="button" id="calculate" value="Calculate">
+               </form>
+               <span id="display_error"></span>
+               <span id="display_value"></span>
+               <span id="display_message"></span></p></div>
+           </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <div class="center-align full-width">
+                <div class="center-align">
+                  <h4><i class="material-icons">arrow_forward</i>Imperial method<i class="large material-icons">arrow_backward</i></h4>
+              </div>
+            </div>
           </div>
-        </div>
          <div class="collapsible-body"><p>
           <div class="white-text">
-           <form>
-           <input type="text" id="weight" placeholder="Weight in kilograms">
-           <input type="text" id="height" placeholder="Height in centimeters">
-           <input class="btn waves-effect white" type="button" id="calculate" value="Calculate">
-           </form>
-           <span id="display_error"></span>
-           <span id="display_value"></span>
-           <span id="display_message"></span></p></div>
-         </div>
-        </li>
-      <li>
-         <div class="collapsible-header">
-           <div class="center-align full-width">
-             <div class="center-align">
-               <h4><i class="material-icons">arrow_forward</i>Imperial method<i class="large material-icons">arrow_backward</i></h4>
-             </div>
-           </div>
-          </div>
-           <div class="collapsible-body"><p>
-           <div class="white-text">
            <form>
            <input type="text" id="weight_pounds" placeholder="Weight in pounds">
            <input type="text" id="height_feets" placeholder="Height in feet">
@@ -113,7 +111,7 @@
             };
           });
       });
-    </script>
-  </div>
+      </script>
+    </div>
   </body>
 </html>

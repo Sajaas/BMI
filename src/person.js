@@ -8,8 +8,6 @@ function Person(attr) {
   Person.prototype.calculate_bmi = function () {
     calculator = new Bmi_calculator();
     calculator.metric_bmi(this);
-    // calculator_2 = new Bmi_calculator();
-    // calculator_2.imperial_bmi(this);
   };
 
   Person.prototype.calculate_bmi_imperial = function () {
